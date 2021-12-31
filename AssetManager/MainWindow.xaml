@@ -22,10 +22,83 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <!-- Header -->
+                <Border Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        CornerRadius="20 20 0 0"
+                        Background="{StaticResource Primary100ToSecondary200GradientBrush}"
+                        MouseDown="Border_MouseDown">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="2" ShadowDepth="2"
+                                  Direction="270" Color="#000"
+                                  Opacity=".6"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="1"
+                                   Text="Asset Manager"
+                                   FontSize="22"
+                                   FontWeight="DemiBold"
+                                   Foreground="{StaticResource PrimaryAccentBrush}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <!-- End Header -->
+
+                <!-- Footer -->
+                <Border Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        CornerRadius="20 20 0 0"
+                        Background="{StaticResource Primary100ToSecondary200GradientBrush}"
+                        MouseDown="Border_MouseDown">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="2" ShadowDepth="2"
+                                  Direction="270" Color="#000"
+                                  Opacity=".6"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0"
+                                    Orientation="Horizontal">
+                            <TextBlock 
+                                   Text="Status"
+                                   FontSize="22"
+                                   FontWeight="DemiBold"
+                                   Foreground="{StaticResource PrimaryAccentBrush}"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Margin="20 0"/>
+                            <Ellipse Fill="{StaticResource PrimaryAccentBrush}"
+                                     Width="15"
+                                     Height="15"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Right"/>
+                            
+                        </StackPanel>
+                       
+                    </Grid>
+                </Border>
+                <!-- End Footer -->
             </Grid>
         </Border>
     </Grid>

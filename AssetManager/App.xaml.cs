@@ -1,5 +1,6 @@
 ﻿using AssetManager.Data.Config;
 using AssetManager.Data.Factories;
+using AssetManager.Services.Utility.MVVM.Navigation;
 using AssetManager.Services.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,7 +23,7 @@ namespace AssetManager
                     DataContext = s.GetRequiredService<AppViewModel>()
                 });
                 services.AddTransient<AppDbContextFactory>();
-                
+                services.AddSingleton<Navigator>();
             }).Build();
         }
 
