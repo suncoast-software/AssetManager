@@ -11,16 +11,16 @@ namespace AssetManager.Services.Utility.MVVM.Commands
     public class NavigateCommand<TViewModel> : CommandBase
     where TViewModel : BaseViewModel
     {
-        private readonly NavigationStore _navigationStore;
+        private readonly Navigator _navigator;
         private readonly Func<TViewModel> _createViewModel;
-        public NavigateCommand(NavigationStore navigationStore, Func<TViewModel> createViewModel)
+        public NavigateCommand(Navigator navigationStore, Func<TViewModel> createViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigator = navigationStore;
             _createViewModel = createViewModel;
         }
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = _createViewModel();
+            _navigator.CurrentViewModel = _createViewModel();
         }
     }
 }

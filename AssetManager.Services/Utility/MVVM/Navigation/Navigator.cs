@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AssetManager.Services.Utility.MVVM.Navigation
 {
-    public class NavigationStore
+    public class Navigator
     {
         public event Action? CurrentViewModelChanged;
         public event Action? AppUserChanged;

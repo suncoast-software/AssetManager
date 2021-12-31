@@ -22,6 +22,7 @@ namespace AssetManager
                     DataContext = s.GetRequiredService<AppViewModel>()
                 });
                 services.AddTransient<AppDbContextFactory>();
+                
             }).Build();
         }
 
