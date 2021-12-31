@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AssetManager.Data\AssetManager.Data.csproj" />
     <ProjectReference Include="..\AssetManager.Services\AssetManager.Services.csproj" />
   </ItemGroup>
 

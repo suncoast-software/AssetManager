@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
+﻿using AssetManager.Data.Config;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,11 @@ namespace AssetManager.Data.Factories
     {
         public AppDbContext CreateDbContext(string[] args)
         {
-            throw new NotImplementedException();
+            var connStr = Configuration.GetConnectionString();
+            var options = new DbContextOptionsBuilder<AppDbContext>();
+
+            options.UseNpgsql(connStr);
+            return new AppDbContext(options.Options);
         }
     }
 }
