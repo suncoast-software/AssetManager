@@ -18,17 +18,18 @@ namespace AssetManager
             _host = Host.CreateDefaultBuilder().ConfigureServices(services => 
             {
                 services.AddSingleton<AppViewModel>();
+                services.AddTransient<AppDbContextFactory>();
+                services.AddSingleton<Navigator>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {
                     DataContext = s.GetRequiredService<AppViewModel>()
                 });
-                services.AddTransient<AppDbContextFactory>();
-                services.AddSingleton<Navigator>();
             }).Build();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            _host.Start();
             MainWindow = _host.Services.GetRequiredService<MainWindow>();
             MainWindow.Show();
             base.OnStartup(e);

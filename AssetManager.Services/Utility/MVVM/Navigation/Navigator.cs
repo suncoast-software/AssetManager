@@ -10,7 +10,7 @@ namespace AssetManager.Services.Utility.MVVM.Navigation
     public class Navigator
     {
         public event Action? CurrentViewModelChanged;
-        public event Action? AppUserChanged;
+
         private BaseViewModel? _currentViewModel;
         public BaseViewModel? CurrentViewModel
         {

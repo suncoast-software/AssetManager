@@ -13,9 +13,9 @@ namespace AssetManager.Services.Utility.MVVM.Commands
     {
         private readonly Navigator _navigator;
         private readonly Func<TViewModel> _createViewModel;
-        public NavigateCommand(Navigator navigationStore, Func<TViewModel> createViewModel)
+        public NavigateCommand(Navigator navigator, Func<TViewModel> createViewModel)
         {
-            _navigator = navigationStore;
+            _navigator = navigator;
             _createViewModel = createViewModel;
         }
         public override void Execute(object? parameter)
