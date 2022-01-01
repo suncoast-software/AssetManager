@@ -81,25 +81,28 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="10"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
                             <RowDefinition Height="10"/>
                         </Grid.RowDefinitions>
-
-                        <StackPanel Orientation="Vertical"
-                            Grid.Row="1"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Top">
-                            
-                            <!-- Home Button -->
-                            <Button Width="70"
-                            Height="60"
-                            Margin="4"
-                            Command=""
-                            Background="{x:Null}"
-                            BorderBrush="{x:Null}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-                                <md:PackIcon Kind="Home"
+                        
+                        <!-- Home Button -->
+                        <Button Width="70"
+                                Height="60"
+                                Margin="4"
+                                Command=""
+                                Grid.Row="1"
+                                Background="{x:Null}"
+                                BorderBrush="{x:Null}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                            <md:PackIcon Kind="Home"
                                      Width="40"
                                      Height="40"
                                      HorizontalAlignment="Center"
@@ -109,15 +112,33 @@
                             <!-- End Home Button -->
 
                             <!-- Dashboard Button -->
-                            <Button Width="70"
-                            Height="60"
-                            Margin="4"
-                            Background="{x:Null}"
-                            BorderBrush="{x:Null}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Command="{Binding DashboardNavigateCommand}">
-                                <md:PackIcon Kind="ViewDashboard"
+                        <Button Width="70"
+                                Height="60"
+                                Margin="4"
+                                Grid.Row="2"
+                                Background="{x:Null}"
+                                BorderBrush="{x:Null}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Command="{Binding DashboardNavigateCommand}">
+                            <md:PackIcon Kind="ViewDashboard"
+                                     Width="40"
+                                     Height="40"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Foreground="{StaticResource PrimaryDarkBrush500}"/>
+                            </Button>
+
+                        <Button Width="70"
+                                Height="60"
+                                Margin="4"
+                                Grid.Row="8"
+                                Background="{x:Null}"
+                                BorderBrush="{x:Null}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Command="">
+                            <md:PackIcon Kind="Settings"
                                      Width="40"
                                      Height="40"
                                      HorizontalAlignment="Center"
@@ -125,7 +146,6 @@
                                      Foreground="{StaticResource PrimaryDarkBrush500}"/>
                             </Button>
                             <!-- End Dashboard Button -->
-                        </StackPanel>
                     </Grid>
                 </Border>
                 <!-- End NavBar -->

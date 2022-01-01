@@ -35,7 +35,7 @@
                     VerticalAlignment="Top">
             <Border CornerRadius="10"
                     Background="{StaticResource SecondarYellowToPrimaryYellow}"
-                    BorderBrush="{StaticResource PrimaryOrangeBrush}"
+                    BorderBrush="{StaticResource SecondaryYellowBrush}"
                     BorderThickness="0 4 0 2"
                     Margin="10"
                     Width="340"
